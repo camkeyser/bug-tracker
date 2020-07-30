@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/bug-tracker/static/css/main.09ba4e53.chunk.css",
+    "main.js": "/bug-tracker/static/js/main.311d900f.chunk.js",
+    "main.js.map": "/bug-tracker/static/js/main.311d900f.chunk.js.map",
+    "runtime-main.js": "/bug-tracker/static/js/runtime-main.890cf13e.js",
+    "runtime-main.js.map": "/bug-tracker/static/js/runtime-main.890cf13e.js.map",
+    "static/js/2.7c69c077.chunk.js": "/bug-tracker/static/js/2.7c69c077.chunk.js",
+    "static/js/2.7c69c077.chunk.js.map": "/bug-tracker/static/js/2.7c69c077.chunk.js.map",
+    "index.html": "/bug-tracker/index.html",
+    "precache-manifest.b10d762a23df57f063ad56c2deb894b6.js": "/bug-tracker/precache-manifest.b10d762a23df57f063ad56c2deb894b6.js",
+    "service-worker.js": "/bug-tracker/service-worker.js",
+    "static/css/main.09ba4e53.chunk.css.map": "/bug-tracker/static/css/main.09ba4e53.chunk.css.map",
+    "static/js/2.7c69c077.chunk.js.LICENSE.txt": "/bug-tracker/static/js/2.7c69c077.chunk.js.LICENSE.txt",
+    "static/media/add.png": "/bug-tracker/static/media/add.e9832a69.png",
+    "static/media/alert.png": "/bug-tracker/static/media/alert.b0db2461.png",
+    "static/media/avatar.png": "/bug-tracker/static/media/avatar.35aaebaa.png",
+    "static/media/close.png": "/bug-tracker/static/media/close.5ed6312c.png",
+    "static/media/dashboard.png": "/bug-tracker/static/media/dashboard.16c7f94b.png",
+    "static/media/delete.png": "/bug-tracker/static/media/delete.1111a048.png",
+    "static/media/dots.png": "/bug-tracker/static/media/dots.6a168284.png",
+    "static/media/filter.png": "/bug-tracker/static/media/filter.4e842f76.png",
+    "static/media/logo.png": "/bug-tracker/static/media/logo.03d98bc2.png",
+    "static/media/news.png": "/bug-tracker/static/media/news.33047336.png",
+    "static/media/owfont-regular.css": "/bug-tracker/static/media/owfont-regular.f3ce0ef1.svg",
+    "static/media/sadness.png": "/bug-tracker/static/media/sadness.5f6c07bb.png",
+    "static/media/search.png": "/bug-tracker/static/media/search.aa087212.png",
+    "static/media/tickets.png": "/bug-tracker/static/media/tickets.290b2a9e.png",
+    "static/media/tools.png": "/bug-tracker/static/media/tools.900843d6.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.890cf13e.js",
+    "static/js/2.7c69c077.chunk.js",
+    "static/css/main.09ba4e53.chunk.css",
+    "static/js/main.311d900f.chunk.js"
+  ]
+}
