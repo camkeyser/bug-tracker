@@ -1,38 +1,913 @@
+/* 
+Fonts
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Palanquin', sans-serif;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: 'Ropa Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+*/
+h1,
+h2,
+h3 {
+  font-family: 'Josefin Sans', sans-serif;
+}
+p,
+td {
+  font-family: 'Palanquin', sans-serif;
+}
+button {
+  font-family: 'Open Sans', sans-serif;
+  outline: none;
+}
 .App {
-  text-align: center;
+  height: 100vh;
+  overflow: hidden;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav {
+  display: flex;
+  justify-content: space-between;
+  height: 55px;
+  background: #28314d;
+  color: white;
+  position: relative;
+  z-index: 9;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navMain {
+  display: flex;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logoBox {
+  width: 80px;
+  display: flex;
+  justify-content: center;
+}
+.logo {
+  height: 80%;
+  align-self: center;
+  margin-left: 7px;
+}
+.navList {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  align-items: center;
+  cursor: default;
+}
+.navList li {
+  padding: 0 10px;
+}
+.navList h3 {
+  margin: 0;
+  font-size: 23px;
+}
+.navIcons {
+  width: 250px;
+  margin-right: 15px;
+}
+.iconList {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  height: 55px;
+  margin: 0;
+  align-items: center;
+}
+.iconList li {
+  padding: 0 10px;
+}
+.iconList li:hover {
+  transform: scale(1.06);
+}
+.iconList img {
+  max-width: 25px;
+}
+.avatar {
+  max-width: 35px !important;
+} 
+.sideBar {
+  background: black;
+  width: 80px;
+  height: 100vh;
+  position: relative;
+}
+.sideList {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: white;
+  height: 250px;
+  justify-content: space-between;
+}
+.sideList li {
+  padding: 5px 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  cursor: pointer;
+}
+.sideList li:hover {
+  background: #3c3c3c;
+  transition: all 0.3s ease 0s;
+}
+.activeIcon {
+  border-width: 0;
+  border-left: 7px solid;
+  border-image: linear-gradient(#07ac07, #5baeec) 0 100%;
+}
+.sideIcon {
+  width: 42px;
+}
+.settingsIcon {
+  bottom: 70px;
+}
+.sideList p {
+  font-size: 12px;
+  margin: 0;
+}
+.sideList hr {
+  width: 60%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.mainContent {
+  display: flex;
+  background-color: #f6f7fb;
+}
+.mainHeader {
+  display: flex;
+  height: 55px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.mainText {
+  margin: 0 0 0 40px;
+}
+.mainText h2 {
+  border-bottom: solid #19546b;
+}
+.ticketCount {
+  display: flex;
+}
+.ticketCount h3 {
+  margin: 0 30px;
+}
+.ticketGreen,
+.tickNode .ot {
+  border-bottom: solid green;
+}
+.ticketOrange,
+.tickNode .ipt {
+  border-bottom: solid #e16900;
+}
+.ticketBlack,
+.tickNode .ct {
+  border-bottom: solid black;
+}
+.mainIcons {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+.mainIcons img {
+  width: 100%;
+}
+.mainIcons button {
+  background: #28314d;
+  border: solid 3px #28314d;
+  color: #fff;
+  margin: 0 5px;
+  height: 35px;
+  padding: 5px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+td button {
+  background: #28314d;
+  border: solid 3px #28314d;
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+.iconI {
+  width: 35px;
+}
+.iconT:hover,
+td button:hover,
+.iconI:hover {
+  background: green;
+  border-color: green;
+  color: white;
+  transition: all 0.3s ease 0s;
+}
+.deleteRow img {
+  max-width: 35px;
+  margin-top: 12px;
+}
+.deleteRow {
+  border: none;
+  padding: 0;
+  background: none;
+}
+.deleteRow:hover {
+  background: none;
+}
+.innerContent {
+  width: 100%;
+}
+table {
+  table-layout: fixed;
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  margin-bottom: 100px;
+}
+.bugFeed {
+  border-top: solid 1px black;
+  padding-top: 15px;
+  max-height: 80vh;
+  overflow-y: scroll;
+}
+.tableHeader {
+  border-bottom: solid 4px #19546b;
+}
+th {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+}
+th.bugDesc {
+  width: 350px;
+  text-align: left;
+  padding-left: 15px;
+}
+td.bugDesc {
+  width: 350px;
+  text-align: left;
+  padding-left: 15px;
+  color: #000;
+  font-weight: bold;
+}
+.idNum {
+  font-family: 'Ropa Sans', sans-serif;
+}
+.node {
+  border-bottom: 1px solid #d6d6d6;
+  height: 50px;
+}
+.node:hover {
+  background: #606b8b;
+  cursor: default;
+  transition: all 0.3s ease 0s;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.node:hover .bugDesc {
+  color: white;
 }
+button:hover {
+  cursor: pointer;
+}
+.hdn {
+  display: none !important;
+}
+.bugStatus p {
+  color: white;
+  margin: 0;
+}
+.orangeStatus {
+  background: #e16900;
+}
+.greenStatus {
+  background: green;
+}
+.blackStatus {
+  background: black;
+}
+.topTicket p {
+  background: #696969 !important;
+}
+.topTicket .statusP {
+  padding: 13px 15px 10px 15px;
+  font-family: 'Josefin Sans', sans-serif;
+  border-radius: 5px;
+}
+.empty {
+  text-align: center;
+  padding: 15px;
+  margin: 30px 10px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 25px;
+}
+/* Modal */
+ .modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+.modal-content {
+  background-color: #000;
+  margin: 15% auto;
+  padding: 20px;
+  width: 70%;
+  color: white;
+  max-width: 850px;
+  border-radius: 5px;
+}
+.modal-content h4 {
+  margin: 0 0 10px 0;
+} 
+.modal-content p {
+  margin: 0;
+}
+.topTicket {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.topTicket p {
+  margin-right: 60px;
+  font-weight: bold;
+}
+.close {
+  float: right;
+  background: none !important;
+  border: none;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+} 
+#myBtn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.edTicket {
+  float: right;
+}
+.repro, 
+.severity {
+  font-weight: bold;
+}
+.longDes {
+  margin: 25px 0 !important;
+}
+#upStatus {
+  display: none;
+  position: absolute;
+  right: 40px;
+  top: 38px;
+  background: #28314d;
+  color: white;
+  font-size: 18px;
+  font-family: 'Josefin Sans', sans-serif;
+  padding: 10px 50px 10px 15px;
+  border-radius: 5px;
+  border: none;
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+  background-image: url(./img/arrowDown.png);
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+/* End Modal */
 
-@keyframes App-logo-spin {
-  from {
+/* new ticket form */
+.ticketForm {
+  display: none;
+  position: absolute;
+  width: 450px;
+  height: 100vh;
+  right: 0;
+  top: 0;
+  background: black;
+  color: white;
+  z-index: 8;
+}
+.active {
+  display: block !important;
+}
+.ticketForm h2 {
+  margin-top: 150px;
+}
+.formWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.formWrap form {
+  width: 80%;
+  text-align: center;
+}
+.formWrap input {
+  width: 100%;
+  font-size: 20px;
+  padding: 10px 0;
+}
+.formWrap textarea {
+  width: 99%;
+  font-size: 16px;
+  min-height: 200px;
+  font-family: 'Open Sans', sans-serif;
+}
+.closeMe {
+  margin: 0 5px;
+  padding: 5px;
+  position: absolute;
+  top: 70px;
+  left: 10px;
+  background: none !important;
+  border: none;
+  outline: none;
+}
+.closeMe img,
+.close img {
+  max-width: 45px;
+}
+.submitBtn {
+  background: black;
+  border: solid 3px white;
+  color: white;
+  margin: 20px 0 0 0;
+  width: 55% !important;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.submitBtn:hover {
+  cursor: pointer;
+  background: green;
+  transition: all 0.2s ease 0s;
+  border-color: green;
+}
+.edTicket {
+  background: white;
+  border: solid 3px white;
+  color: black;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 5px 10px;
+}
+.edTicket:hover {
+  cursor: pointer;
+  background: #28314d;
+  transition: all 0.2s ease 0s;
+  border-color: #28314d;
+  color: white;
+}
+.formWrap select {
+  width: 100%;
+  font-size: 20px;
+  padding: 10px 5px;
+}
+.formWrap label {
+  display: block;
+}
+label p {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+/* End new ticket form */
+.nodeRow {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  justify-content: center;
+}
+.nodeBox {
+  width: 27%;
+  background: white;
+  margin: 10px 5px;
+  padding: 15px;
+  color: black;
+  border-radius: 5px;
+  box-shadow: 0 0.46875rem 2.1875rem rgba(0, 0, 0, 0.03), 0 0.9375rem 1.40625rem rgba(0, 0, 0, 0.03), 0 0.25rem 0.53125rem rgba(0, 0, 0, 0.05), 0 0.125rem 0.1875rem rgba(0, 0, 0, 0.03);
+}
+.newsNode {
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 20px;
+  background: none;
+  box-shadow: none;
+}
+.newsNode h2 {
+  text-align: center;
+  text-decoration: underline;
+}
+.newsBox {
+  display: flex;
+}
+.newsThumb {
+  max-height: 100px;
+}
+.userHeading img {
+  max-width: 30%;
+}
+.card-title {
+  color: black;
+  font-size: 14px;
+  height: 65px;
+  padding: 5px 20px;
+  margin-bottom: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+}
+.newsBox a {
+  text-decoration: none;
+}
+.card {
+  height: 310px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 25px;
+}
+.card-image {
+  min-height: 175px;
+  background-size: 100%;
+  max-height: 175px;
+  background-position: center;
+  border-bottom: solid 1px black;
+}
+.cardNode {
+  margin: 5px;
+  width: 33%;
+  box-shadow: 0 0.46875rem 2.1875rem rgba(0, 0, 0, 0.03), 0 0.9375rem 1.40625rem rgba(0, 0, 0, 0.03), 0 0.25rem 0.53125rem rgba(0, 0, 0, 0.05), 0 0.125rem 0.1875rem rgba(0, 0, 0, 0.03);
+  border-radius: 5px;
+}
+.wh-btn {
+  color: black;
+  font-weight: bold;
+  text-align: right;
+  padding: 0 15px 5px 0;
+}
+.wh-btn:hover {
+  background: white;
+  text-decoration: underline;
+  transition: all 0.3s ease 0s;
+}
+.owf {
+  font-size: 60px;
+  margin-left: 5px;
+}
+.forecastBox {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.fc {
+  margin: 0 10px;
+  font-size: 17px;
+  background: #28314d;
+  color: white;
+  padding: 10px 0px;
+  font-family: 'Josefin Sans', sans-serif;
+  border-radius: 5px;
+}
+.tempLabel {
+  font-size: 11px;
+}
+.dayName {
+  margin: 0 7px 7px 7px;
+  background: white;
+  border-radius: 5px;
+  color: black;
+  padding: 5px 10px;
+}
+.currentTempBox {
+  text-align: center;
+}
+.cityBox {
+  font-size: 24px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.tempBox {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 45px;
+  display: flex;
+  justify-content: center;
+  color: #28314d;
+}
+.typeBox {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.dashHeading h2 {
+  margin: 20px 0 0 20px;
+}
+.myNode h3 {
+  margin: 0 0 7px 0;
+  text-align: center;
+}
+.ticketSummary {
+  display: flex;
+  justify-content: space-between;
+}
+.ticketSummary h4 {
+  margin: 5px;
+}
+.tickNode p {
+  font-size: 23px;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 2px 0;
+}
+.myNode hr {
+  color: white;
+  margin: 25px 0 15px 0;
+}
+.userHeading {
+  display: flex;
+  justify-content: space-around;
+}
+.userHeading h5 {
+  margin: 5px 0;
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+}
+.posh5 {
+  font-size: 12px;
+}
+.nameh5 {
+  font-size: 22px;
+}
+.stacked {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.tickNode {
+  background: white;
+  border-radius: 5px;
+  padding: 0px 5px;
+  color: black;
+}
+.annoNode h2 {
+  text-align: center;
+  text-decoration: underline;
+  margin: 0;
+}
+.announceBox ul {
+  padding: 10px;
+  font-size: 13px;
+}
+.announceBox li {
+  background: white;
+  color: black;
+  border-radius: 5px;
+  margin: 0;
+  padding: 5px;
+  font-family: 'Open Sans', sans-serif;
+}
+/* Loading Animation */
+.loadBox {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+.lds-roller {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #000;
+  margin: -4px 0 0 -4px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+@keyframes lds-roller {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
+  }
+}
+/* End Loading Animation */
+.mobileNotice {
+  display: none;
+}
+
+
+/* Responsive Media Queries */
+/* by min width */
+@media screen and (min-width: 1350px) {
+  .nodeBox {
+    margin: 10px 25px;
+    padding: 15px;
+  }
+  .newsNode {
+    width: 90%;
+  }
+  .cardNode {
+    margin: 15px;
+  }
+  .fc {
+    font-size: 24px;
+    padding: 15px 5px;
+  }
+  .announceBox ul {
+    padding: 25px;
+    font-size: 13px;
+  }
+}
+@media screen and (min-width: 1550px) {
+  .ticketSummary {
+    justify-content: space-evenly;
+  }
+  .nameh5 {
+    font-size: 28px;
+  }
+  .posh5 {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 1850px) {
+  .typeBox {
+    font-size: 25px;
+  }
+  .tempBox {
+    font-size: 55px;
+  }
+  .announceBox ul {
+    padding: 25px 40px;
+    font-size: 15px;
+  }
+}
+/* by max width */
+@media screen and (max-width: 1000px) {
+  .mobileNotice {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    color: #5e5e5e;
+    z-index: 99;
+    text-align: center;
+  }
+  .boxed {
+    border: solid #5e5e5e 2px;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10%;
+  }
+  .boxed img {
+    max-width: 30%;
+  }
+}
+/* By Max Height */
+@media screen and (max-height: 780px) {
+  .card {
+    height: 270px;
+  }
+  .card-image {
+    min-height: 135px;
+    max-height: 135px;
+  }
+  .newsNode {
+    margin-top: 10px;
+  }
+  .fc {
+    font-size: 21px;
+  }
+  .ticketForm h2 {
+    margin-top: 100px;
+    margin-bottom: 5px;
+  }
+  .formWrap textarea {
+    min-height: 160px;
+  }
+  .formWrap input {
+    font-size: 18px;
+  }
+  .formWrap textarea {
+    font-size: 15px;
+  }
+  label p {
+    margin-top: 5px;
+  }
+}
+@media screen and (max-height: 780px) {
+  .newsNode h2 {
+    text-align: center;
+    text-decoration: underline;
+    margin: 5px;
+  }
+  .userHeading img {
+    max-width: 23%;
+  }
+  .announceBox ul {
+    padding: 15px 25px;
+    font-size: 13px;
+  }
+  .dashHeading h2 {
+    font-size: 20px;
+  }
+  .card-image {
+    min-height: 125px;
+    max-height: 125px;
+  }
+  .card {
+    height: 250px;
+  }
+  .newsNode h2 {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  .sideIcon {
+    width: 35px;
   }
 }
